@@ -4,7 +4,7 @@ import { BASIC_SETTINGS, DEFAULT_SETTINGS, load } from '@ws-ui/webform-editor';
 const commonSettings: TSetting[] = [
   {
     key: 'theme',
-    label: 'theme',
+    label: 'Theme',
     type: ESetting.SELECT,
     options: [
       {
@@ -16,20 +16,17 @@ const commonSettings: TSetting[] = [
         value: 'monokai',
       }
     ],
+    defaultValue:'basic'
   },
   {
     key:'indentWidth',
     label:'Indent width',
     type:ESetting.NUMBER_FIELD,
+    defaultValue:15,
   },
   {
     key:'collapsed',
     label:'Collapse',
-    type:ESetting.CHECKBOX,
-  },
-  {
-    key:'enableClipboard',
-    label:'Enable clipboard',
     type:ESetting.CHECKBOX,
   }
 ];

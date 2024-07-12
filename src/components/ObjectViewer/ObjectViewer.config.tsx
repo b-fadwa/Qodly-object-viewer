@@ -1,6 +1,6 @@
 import { EComponentKind, T4DComponentConfig } from '@ws-ui/webform-editor';
 import { Settings } from '@ws-ui/webform-editor';
-import { MdOutlineTextSnippet } from 'react-icons/md';
+import { MdOutlineDataObject } from "react-icons/md";
 
 import ObjectViewerSettings, { BasicSettings } from './ObjectViewer.settings';
 
@@ -20,7 +20,7 @@ export default {
   info: {
     displayName: 'ObjectViewer',
     exposed: true,
-    icon: MdOutlineTextSnippet,
+    icon: MdOutlineDataObject,
     events: [
       {
         label: 'On Click',
@@ -56,6 +56,8 @@ export default {
     },
   },
   defaultProps: {
+    theme:'basic',
+    indentWidth:15
   },
 } as T4DComponentConfig<IObjectViewerProps>;
 
