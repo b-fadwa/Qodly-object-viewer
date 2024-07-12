@@ -61,4 +61,6 @@ export default {
 
 export interface IObjectViewerProps extends webforms.ComponentProps {
   theme: any;
+  indentWidth:number;
+  collapsed:boolean;
 }

@@ -5,7 +5,14 @@ import { FC, useEffect, useState } from 'react';
 import { IObjectViewerProps } from './ObjectViewer.config';
 import ReactJson from 'react-json-view';
 
-const ObjectViewer: FC<IObjectViewerProps> = ({ theme,style, className, classNames = [] }) => {
+const ObjectViewer: FC<IObjectViewerProps> = ({
+  theme,
+  indentWidth,
+  collapsed,
+  style,
+  className,
+  classNames = [],
+}) => {
   const { connect } = useRenderer();
   const [value, setValue] = useState<object>({});
   const {
@@ -32,7 +39,12 @@ const ObjectViewer: FC<IObjectViewerProps> = ({ theme,style, className, classNam
 
   return (
     <div ref={connect} style={style} className={cn(className, classNames)}>
-      <ReactJson src={value} theme={theme}/>
+      <ReactJson
+        src={value}
+        theme={theme}
+        collapsed={collapsed}
+        indentWidth={indentWidth}
+      />
     </div>
   );
 };

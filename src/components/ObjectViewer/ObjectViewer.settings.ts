@@ -8,15 +8,30 @@ const commonSettings: TSetting[] = [
     type: ESetting.SELECT,
     options: [
       {
-        label: 'default',
-        value: '',
+        label: 'basic',
+        value: 'basic',
       },
       {
         label: 'monokai',
         value: 'monokai',
-      },
+      }
     ],
   },
+  {
+    key:'indentWidth',
+    label:'Indent width',
+    type:ESetting.NUMBER_FIELD,
+  },
+  {
+    key:'collapsed',
+    label:'Collapse',
+    type:ESetting.CHECKBOX,
+  },
+  {
+    key:'enableClipboard',
+    label:'Enable clipboard',
+    type:ESetting.CHECKBOX,
+  }
 ];
 
 const Settings: TSetting[] = [
