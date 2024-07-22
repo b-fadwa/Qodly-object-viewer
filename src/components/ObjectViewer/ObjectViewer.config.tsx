@@ -1,6 +1,6 @@
 import { EComponentKind, T4DComponentConfig } from '@ws-ui/webform-editor';
 import { Settings } from '@ws-ui/webform-editor';
-import { MdOutlineDataObject } from "react-icons/md";
+import { MdOutlineDataObject } from 'react-icons/md';
 
 import ObjectViewerSettings, { BasicSettings } from './ObjectViewer.settings';
 
@@ -56,13 +56,30 @@ export default {
     },
   },
   defaultProps: {
-    theme:'basic',
-    indentWidth:15
+    theme: 'basic',
+    indentWidth: 15,
+    iconStyle: 'circle',
+    collapseStringsAfterLength: 100,
+    groupArraysAfterLength: 5,
+    name: 'root',
+    enableClipboard: false,
+    quotesOnKeys: false,
+    displayObjectSize: false,
+    displayDataTypes: false,
   },
 } as T4DComponentConfig<IObjectViewerProps>;
 
 export interface IObjectViewerProps extends webforms.ComponentProps {
   theme: any;
-  indentWidth:number;
-  collapsed:boolean;
+  indentWidth: number;
+  collapsed: boolean;
+  iconStyle: any; //string | 'circle';
+  collapseStringsAfterLength: number;
+  groupArraysAfterLength: number;
+  displayDataTypes: boolean;
+  displayObjectSize: boolean;
+  sortKeys: boolean;
+  name: string;
+  enableClipboard: boolean;
+  quotesOnKeys: boolean;
 }

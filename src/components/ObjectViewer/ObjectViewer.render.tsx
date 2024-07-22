@@ -9,6 +9,15 @@ const ObjectViewer: FC<IObjectViewerProps> = ({
   theme,
   indentWidth,
   collapsed,
+  iconStyle,
+  collapseStringsAfterLength,
+  groupArraysAfterLength,
+  displayDataTypes,
+  displayObjectSize,
+  sortKeys,
+  name,
+  enableClipboard,
+  quotesOnKeys,
   style,
   className,
   classNames = [],
@@ -44,6 +53,20 @@ const ObjectViewer: FC<IObjectViewerProps> = ({
         theme={theme}
         collapsed={collapsed}
         indentWidth={indentWidth}
+        iconStyle={iconStyle}
+        collapseStringsAfterLength={collapseStringsAfterLength}
+        groupArraysAfterLength={groupArraysAfterLength}
+        displayDataTypes={displayDataTypes}
+        displayObjectSize={displayObjectSize}
+        sortKeys={sortKeys}
+        name={name}
+        enableClipboard={enableClipboard}
+        quotesOnKeys={quotesOnKeys}
+        style={{
+          width: '100%',
+          height: '100%',
+          overflow: 'auto',
+        }}
       />
     </div>
   );
